@@ -1,0 +1,20 @@
+<mat-card class="card" (click)="onSelectToggle(user)">
+  <img mat-card-image src="{{ user.img }}" alt="Avatar" />
+  <mat-card-header>
+    <mat-card-title>{{ user.firstname + " " + user.lastname }}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <h2 class="card-title">Email:</h2>
+    <p>{{ user.email }}</p>
+    <h2 class="card-title">Phone:</h2>
+    <p>{{ user.phone }}</p>
+  </mat-card-content>
+  <input
+    type="checkbox"
+    class="checkbox"
+    name="checked"
+    id="{{ user.id }}"
+    [(ngModel)]="value"
+  />
+</mat-card>

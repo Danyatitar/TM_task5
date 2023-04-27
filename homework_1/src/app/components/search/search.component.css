@@ -1,0 +1,43 @@
+.select-items {
+  padding: 30px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  border-bottom: 2px solid blue;
+}
+.buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.input {
+  padding: 15px 30px;
+  font-size: 24px;
+  background-color: skyblue;
+  border: none;
+  border-radius: 15px;
+}
+.input:focus {
+  outline: 2px solid blue;
+}
+.error {
+  margin-top: 10px;
+  font-size: 20px;
+  color: red;
+}
+
+@media screen and (max-width: 1050px) {
+  .select-items {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .buttons {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

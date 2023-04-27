@@ -1,0 +1,10 @@
+<mat-toolbar class="users">
+  <div *ngFor="let user of selectedUsers">
+    <app-user-item
+      [user]="user.user"
+      [selected]="user.selected"
+      (selectUser)="onSelect(user.user)"
+      (unselectUser)="onUnSelect(user.user)"
+    ></app-user-item>
+  </div>
+</mat-toolbar>

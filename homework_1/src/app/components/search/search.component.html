@@ -1,0 +1,30 @@
+<mat-toolbar class="select-items">
+  <div class="buttons">
+    <app-button
+      color="primary"
+      text="Select All"
+      (btnClick)="onSelectAll()"
+    ></app-button>
+    <app-button
+      [isDisable]="isDisable"
+      color="warn"
+      text="Delete"
+      (btnClick)="onDeleteSelection()"
+    ></app-button>
+    <app-select></app-select>
+  </div>
+  <div class="">
+    <input
+      type="text"
+      name="search"
+      [(ngModel)]="name"
+      id="input-search"
+      class="input"
+      placeholder="Search"
+      (keyup)="onChange()"
+    />
+    <p *ngIf="foundUsers.length === 0" class="error">
+      Users with fullname: "{{ name }}" not found!
+    </p>
+  </div>
+</mat-toolbar>

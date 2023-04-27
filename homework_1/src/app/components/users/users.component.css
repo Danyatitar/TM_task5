@@ -1,0 +1,8 @@
+.users {
+  height: auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: center;
+}
