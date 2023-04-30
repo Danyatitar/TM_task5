@@ -1,0 +1,17 @@
+.navigation {
+  padding: 50px;
+  box-sizing: border-box;
+  border-bottom: 2px solid white;
+}
+.link {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+.link:hover {
+  color: black;
+  border-color: black;
+}

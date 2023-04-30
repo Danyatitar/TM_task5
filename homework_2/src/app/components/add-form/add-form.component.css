@@ -1,0 +1,39 @@
+.form {
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  padding-top: 10px;
+}
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.form-title {
+  font-size: 32px;
+  margin-top: 40px;
+}
+
+.label {
+  padding-left: 20px;
+  font-size: 24px;
+}
+.form-control {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 24px;
+  border-radius: 25px;
+  background-color: skyblue;
+  border: none;
+}
+.form-control:focus {
+  outline: 2px solid blue;
+}
+.error {
+  color: red;
+  padding-left: 20px;
+}

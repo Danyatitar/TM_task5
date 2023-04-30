@@ -1,0 +1,102 @@
+<mat-toolbar class="form">
+  <app-button
+    color="{{ show ? 'warn' : 'primary' }}"
+    text="{{ show ? 'Close' : 'Add User' }}"
+    (btnClick)="onToggle()"
+  ></app-button>
+
+  <form
+    *ngIf="show"
+    class="form-content"
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+  >
+    <h2 class="form-title">User Information Form</h2>
+    <div class="form-grop">
+      <label class="label" for="name">Input user's firstname</label>
+      <input
+        class="form-control invalid"
+        type="text"
+        id="name"
+        formControlName="name"
+      />
+      <p
+        *ngIf="form.controls['name'].invalid && form.controls['name'].touched"
+        class="error"
+      >
+        Invalid Firstname
+      </p>
+    </div>
+    <div class="form-grop">
+      <label class="label" for="surname">Input user's lastname</label>
+      <input
+        class="form-control"
+        type="text"
+        id="surname"
+        formControlName="surname"
+      />
+      <p
+        *ngIf="
+          form.controls['surname'].invalid && form.controls['surname'].touched
+        "
+        class="error"
+      >
+        Invalid Lastname
+      </p>
+    </div>
+    <label class="label" for="name">Input user's username</label>
+    <input
+      class="form-control invalid"
+      type="text"
+      id="name"
+      formControlName="username"
+    />
+    <p
+      *ngIf="
+        form.controls['username'].invalid && form.controls['username'].touched
+      "
+      class="error"
+    >
+      Invalid Username
+    </p>
+    <div class="form-grop">
+      <label class="label" for="email">Input user's email</label>
+      <input
+        class="form-control"
+        type="email"
+        id="email"
+        formControlName="email"
+      />
+      <p
+        *ngIf="form.controls['email'].invalid && form.controls['email'].touched"
+        class="error"
+      >
+        Invalid Email
+      </p>
+    </div>
+
+    <div class="form-grop">
+      <label class="label" for="phone">Input user's phone</label>
+      <input
+        class="form-control"
+        type="tel"
+        id="phone"
+        formControlName="phone"
+      />
+      <p
+        *ngIf="form.controls['phone'].invalid && form.controls['phone'].touched"
+        class="error"
+      >
+        Invalid Phone
+      </p>
+    </div>
+
+    <app-button
+      color="primary"
+      text="Submit"
+      [ngStyle]="{ 'text-align': 'center' }"
+      [isDisable]="form.invalid"
+    ></app-button>
+    <p *ngIf="error" class="error">{{ error }}</p>
+  </form>
+</mat-toolbar>

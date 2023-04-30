@@ -1,0 +1,17 @@
+.users {
+  height: auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: center;
+  height: auto;
+}
+.error {
+  color: red;
+  height: auto;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 32px;
+  font-weight: 700;
+}

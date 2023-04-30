@@ -1,0 +1,12 @@
+<select
+  name="sort"
+  id="sort-order"
+  class="sort-order"
+  [(ngModel)]="sortOption"
+  (change)="sortUsers()"
+  value="Sorting Order"
+>
+  <option *ngFor="let order of orders" value="{{ order.value }}">
+    {{ order.viewValue }}
+  </option>
+</select>
